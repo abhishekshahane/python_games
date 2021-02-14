@@ -1,5 +1,9 @@
 from getpass import getpass
-#WARNING: ONE WORD ONLY, will add multiple words in a later update maybe
+"""
+WARNING: ONE WORD ONLY, compress your words together
+if you want to use a sentence, for example: 
+theWolfLikesCheese
+"""
 #lol this is just to check my python skills on classes 
 class Hangman:
     def __init__(self,input1,asciihangman):
@@ -11,7 +15,11 @@ class Hangman:
         def check_win(li, input1):
             return ''.join(li)==input1
         if len(self.input1.split())>1:
-            print("Sorry, but we do not support multiple words yet!")
+            print("""
+WARNING: ONE WORD ONLY, compress your words together
+if you want to use a sentence, for example: 
+theWolfLikesCheese
+""")
         else:
             li = [letter for letter in self.input1]
             lia = ['_' for letter in self.input1]
@@ -96,6 +104,6 @@ asciihangman = HANGMANPICS = ['''
  / \  |
       |
 =========''']
-input1 = getpass()
+input1 = getpass("Enter your word(don't worry, the other player won't see this):  ").lower()
 c = Hangman(input1,asciihangman)
 c.play()
