@@ -10,7 +10,7 @@ class Hangman:
         def check_win(li, input1):
             return ''.join(li)==input1
         if len(self.input1.split())>1:
-            print("RASCAL")
+            print("Sorry, but multiple words aren't supported at this time!")
         else:
             li = [letter for letter in self.input1]
             lia = ['_' for letter in self.input1]
